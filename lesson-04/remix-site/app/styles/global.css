@@ -18,24 +18,6 @@ a {
   margin: 0 auto;
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  padding: var(--size-5);
-}
-
-.logo {
-  color: white;
-  font-size: var(--font-size-4);
-  font-weight: var(--font-weight-8);
-}
-
-.nav a {
-  color: var(--gray-4);
-  font-weight: var(--font-weight-7);
-  font-size: var(--font-size-2);
-}
-
 /* Content -------------------------------------------------------- */
 
 .page-content {
