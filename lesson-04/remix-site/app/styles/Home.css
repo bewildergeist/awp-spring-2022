@@ -1,0 +1,22 @@
+section {
+  max-width: calc(2 * var(--size-14));
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: var(--font-size-8);
+  font-weight: var(--font-weight-8);
+  line-height: var(--font-lineheight-1);
+}
+
+.fundamentals {
+  color: var(--cyan-3);
+}
+
+.modern {
+  color: var(--green-4);
+}
+
+.create {
+  color: var(--yellow-5);
+}

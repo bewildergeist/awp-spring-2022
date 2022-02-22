@@ -1,5 +1,7 @@
-import { Link, redirect } from "remix";
+import { redirect } from "remix";
 import { useLoaderData } from "remix";
+import PageHeader from "~/components/PageHeader";
+import Button from "~/components/Button.jsx";
 import db from "~/db/db.server";
 
 export const loader = async function ({ params }) {
@@ -27,26 +29,25 @@ export default function Post() {
 
   return (
     <div>
-      <div className="page-header">
-        <h1>{recipe.title}</h1>
-        <Link to=".." className="btn btn-reverse">
-          Back
-        </Link>
+      <PageHeader title={recipe.title}>
+        <Button to="..">Back</Button>
+      </PageHeader>
+      <div className="page-content">
+        <h2>Ingredients</h2>
+        <ul>
+          {recipe.ingredients?.map((ingredient) => (
+            <li key={ingredient}>{ingredient}</li>
+          ))}
+        </ul>
+        <h2>Description</h2>
+        <p>{recipe.body}</p>
       </div>
-      <h2>Ingredients</h2>
-      <ul>
-        {recipe.ingredients?.map((ingredient) => (
-          <li key={ingredient}>{ingredient}</li>
-        ))}
-      </ul>
-      <h2>Description</h2>
-      <p className="page-content">{recipe.body}</p>
       <div className="page-footer">
         <form method="post">
           <input type="hidden" name="_method" value="delete" />
-          <button type="submit" className="btn btn-delete">
+          <Button type="submit" destructive>
             Delete
-          </button>
+          </Button>
         </form>
       </div>
     </div>

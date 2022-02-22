@@ -49,9 +49,9 @@ function Layout({ children }) {
         <Link to="/" className="logo">
           Remixed Recipes
         </Link>
-        <ul className="nav">
+        <div className="nav">
           <Link to="/recipes">Recipes</Link>
-        </ul>
+        </div>
       </nav>
       <div className="container">{children}</div>
     </>

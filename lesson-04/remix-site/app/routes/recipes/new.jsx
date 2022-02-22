@@ -1,4 +1,6 @@
 import { Link, redirect } from "remix";
+import Button from "~/components/Button.jsx";
+import PageHeader from "~/components/PageHeader";
 import db from "~/db/db.server";
 
 export const action = async ({ request }) => {
@@ -25,12 +27,9 @@ export const action = async ({ request }) => {
 export default function NewRecipe() {
   return (
     <>
-      <div className="page-header">
-        <h1>New Recipe</h1>
-        <Link to="/recipes" className="btn btn-reverse">
-          Back
-        </Link>
-      </div>
+      <PageHeader title="New Recipe">
+        <Button to="/recipes">Back</Button>
+      </PageHeader>
       <div className="page-content">
         <form method="POST">
           <div className="form-control">
@@ -45,9 +44,7 @@ export default function NewRecipe() {
             <label htmlFor="body">Recipe body</label>
             <textarea name="body" id="body"></textarea>
           </div>
-          <button className="btn btn-block" type="submit">
-            Add Recipe
-          </button>
+          <Button type="submit">Add recipe</Button>
         </form>
       </div>
     </>
