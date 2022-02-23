@@ -1,10 +1,10 @@
 import { Link, Outlet, LiveReload, Links, Meta, Scripts } from "remix";
-import globalStylesUrl from "~/styles/global.css";
+import styles from "~/styles/Home.css";
 
 export const links = () => [
   {
     rel: "stylesheet",
-    href: globalStylesUrl,
+    href: styles,
   },
 ];
 
@@ -49,9 +49,6 @@ function Layout({ children }) {
         <Link to="/" className="logo">
           Remixed Recipes
         </Link>
-        <ul className="nav">
-          <Link to="/recipes">Recipes</Link>
-        </ul>
       </nav>
       <div className="container">{children}</div>
     </>

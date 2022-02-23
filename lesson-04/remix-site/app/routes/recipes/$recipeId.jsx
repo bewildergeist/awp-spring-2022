@@ -43,7 +43,7 @@ export default function Recipe() {
         ))}
       </ul>
       <div className="page-footer">
-        <form method="recipe">
+        <form method="POST">
           <input type="hidden" name="_method" value="delete" />
           <button type="submit" className="btn btn-delete">
             Delete
