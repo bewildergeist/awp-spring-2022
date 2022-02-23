@@ -38,7 +38,7 @@ export default function Recipe() {
       <ul className="">
         {recipe.trimArr.map((ingredient) => (
           <li key={ingredient}>
-            <p>{ingredient.trim()}</p>
+            <p>{ingredient}</p>
           </li>
         ))}
       </ul>
