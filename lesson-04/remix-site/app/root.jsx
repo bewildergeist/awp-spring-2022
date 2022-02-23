@@ -1,10 +1,15 @@
 import { Link, Outlet, LiveReload, Links, Meta, Scripts } from "remix";
 import globalStylesUrl from "~/styles/global.css";
+import recipiesStyleUrl from "~/styles/recipies.css";
 
 export const links = () => [
   {
     rel: "stylesheet",
     href: globalStylesUrl,
+  },
+  {
+    rel: "stylesheet",
+    href: recipiesStyleUrl,
   },
 ];
 
