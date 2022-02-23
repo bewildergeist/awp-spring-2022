@@ -9,13 +9,13 @@ export const links = () => [
 ];
 
 export const meta = () => ({
-  description: "An example blog",
+  description: "A recipe blog",
   keywords: "remix, javascript",
 });
 
 export default function App() {
   return (
-    <Document title="Remix Blog">
+    <Document title="Recipe Blog">
       <Layout>
         <Outlet />
       </Layout>
@@ -47,10 +47,10 @@ function Layout({ children }) {
     <>
       <nav className="navbar">
         <Link to="/" className="logo">
-          Remix Blog
+          Recipe Blog
         </Link>
         <ul className="nav">
-          <Link to="/posts">Posts</Link>
+          <Link to="/recipes">Recipes</Link>
         </ul>
       </nav>
       <div className="container">{children}</div>
