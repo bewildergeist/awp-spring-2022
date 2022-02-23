@@ -1,19 +1,66 @@
 {
-  "posts": [
+  "recipes": [
     {
       "id": "1",
-      "title": "Post 1",
-      "body": "This is test post #1"
+      "title": "Recipe 1",
+      "body": "This is test recipe #1"
     },
     {
       "id": "2",
-      "title": "Post 2",
-      "body": "This is test post #2"
+      "title": "Recipe 2",
+      "body": "This is test recipe #2"
     },
     {
       "id": "3",
-      "title": "Post 3",
-      "body": "This is test post #3"
+      "title": "Recipe 3",
+      "body": "This is test recipe #3"
+    },
+    {
+      "id": "17f25a1e165",
+      "title": "Pizza Hawaii",
+      "ingredientArray": [
+        "Dough",
+        "cheese",
+        "ananas"
+      ],
+      "body": "Do this and this and then this!"
+    },
+    {
+      "id": "17f25b04aff",
+      "title": "Spaghetti",
+      "ingredientArray": [
+        "Meat",
+        "pasta",
+        "tomatoe sauce"
+      ],
+      "body": "BLa bla bka"
+    },
+    {
+      "id": "17f25cd1e78",
+      "title": "lasagne",
+      "ingredientArray": [
+        "Pasta",
+        "Meat"
+      ],
+      "body": "Bkjdshfksdjgfkasjdsa"
+    },
+    {
+      "id": "17f25db0917",
+      "title": "Pierogi",
+      "ingredientArray": [
+        "Potatoes",
+        "dough"
+      ],
+      "body": "Make a pierogi!"
+    },
+    {
+      "id": "17f25e611c6",
+      "title": "Cake",
+      "ingredientArray": [
+        "Sugar",
+        "Milk"
+      ],
+      "body": "Bdhfiudshgfksjfs"
     }
   ]
 }
