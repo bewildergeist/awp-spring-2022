@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-blue {
+    @apply self-start p-4 bg-blue-500 text-white rounded-lg px-8 py-2 hover:bg-slate-100 hover:text-black transition-colors duration-300;
+  }
+}
+@layer base {
+  h1 {
+    @apply text-red-600 font;
+  }
+  body {
+    @apply bg-slate-800;
+  }
+}
