@@ -3,39 +3,47 @@ import { useLoaderData } from "remix";
 import db from "~/db/db.server";
 
 export const loader = async function ({ params }) {
-  const post = db.data.posts.find((p) => p.id === params.postId);
+  const recipes = db.data.recipes.find((p) => p.id === params.recipeId);
 
-  if (!post) {
-    throw new Error("Post not found");
+  if (!recipes) {
+    throw new Error("Recipe not found");
   }
   return {
-    post,
+    recipes,
   };
 };
 
 export const action = async function ({ request, params }) {
   const form = await request.formData();
   if (form.get("_method") === "delete") {
-    db.data.posts = db.data.posts.filter((p) => p.id !== params.postId);
+    db.data.recipes = db.data.recipes.filter((p) => p.id !== params.recipeId);
     db.write();
-    return redirect("/posts");
+    return redirect("/recipes");
   }
 };
 
-export default function Post() {
-  const { post } = useLoaderData();
+export default function Recipe() {
+  const { recipes } = useLoaderData();
 
   return (
     <div>
       <div className="page-header">
-        <h1>{post.title}</h1>
+        <h1>{recipes.title}</h1>
         <Link to=".." className="btn btn-reverse">
           Back
         </Link>
       </div>
-      <p className="page-content">{post.body}</p>
+      <h2>Ingredients</h2>
+      <ul>
+      {recipes.ingredients.map((ingredients) => (
+        <li>{ingredients}</li>
+      )
+      )}
+      </ul>
+      <h2>Decription</h2>
+      <p className="page-content">{recipes.body}</p>
       <div className="page-footer">
-        <form method="post">
+        <form method="POST">
           <input type="hidden" name="_method" value="delete" />
           <button type="submit" className="btn btn-delete">
             Delete
