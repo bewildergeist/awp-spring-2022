@@ -1,0 +1,15 @@
+.recipes-container{
+    margin: 5%;
+}
+
+.recipes-list{
+    list-style-type: none;
+}
+
+.recipes-list > li {
+    text-decoration: none !important;
+    
+}
+
+
+
