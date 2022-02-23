@@ -1,19 +1,24 @@
 {
   "posts": [
     {
-      "id": "1",
-      "title": "Post 1",
-      "body": "This is test post #1"
+      "id": "17f25f04513",
+      "title": "Kage",
+      "ingredients": [
+        "æg",
+        "mel",
+        "sukker"
+      ],
+      "body": "bland alt"
     },
     {
-      "id": "2",
-      "title": "Post 2",
-      "body": "This is test post #2"
-    },
-    {
-      "id": "3",
-      "title": "Post 3",
-      "body": "This is test post #3"
+      "id": "17f25f0b866",
+      "title": "sandwich",
+      "ingredients": [
+        "kød",
+        "bacon",
+        "ost"
+      ],
+      "body": "Alt skal ind i brødet"
     }
   ]
 }

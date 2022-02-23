@@ -33,6 +33,11 @@ export default function Post() {
           Back
         </Link>
       </div>
+      <ul>
+        {post.ingredients?.map((ingredient) => (
+          <li key={ingredient}>{ingredient}</li>
+        ))}
+      </ul>
       <p className="page-content">{post.body}</p>
       <div className="page-footer">
         <form method="post">

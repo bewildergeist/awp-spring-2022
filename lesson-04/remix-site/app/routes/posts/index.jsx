@@ -11,9 +11,9 @@ export default function PostItems() {
   return (
     <div>
       <div className="page-header">
-        <h1>Posts</h1>
+        <h1>Recipes</h1>
         <Link to="/posts/new" className="btn">
-          New post
+          New recipes
         </Link>
       </div>
       <ul className="posts-list">
