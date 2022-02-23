@@ -20,7 +20,7 @@ export default function NewRecipe() {
     <>
       <div className="page-header">
         <h1>New Recipe</h1>
-        <Link to="/recipes" className="btn btn-reverse">
+        <Link to="/recipes" className="button">
           Back
         </Link>
       </div>
@@ -38,7 +38,7 @@ export default function NewRecipe() {
             <label htmlFor="ingredients">Ingredients</label>
             <textarea name="ingredients" id="ingredient"></textarea>
           </div>
-          <button className="btn btn-block" type="submit">
+          <button className="button" type="submit">
             Add Recipe
           </button>
         </form>

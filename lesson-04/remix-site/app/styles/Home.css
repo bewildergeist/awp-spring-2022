@@ -1,0 +1,25 @@
+.highlight-1 {
+    color: var(--blue-3);
+}
+
+.highlight-2 {
+    color: var(--teal-6);
+}
+
+.highlight-3 {
+    color: var(--yellow-5);
+}
+
+h1 {
+    text-align: left;
+    font-size: 4rem;
+}
+
+.landingPage {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 50px;
+}
+
+
