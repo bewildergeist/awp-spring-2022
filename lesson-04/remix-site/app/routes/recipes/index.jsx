@@ -1,5 +1,10 @@
 import { Link, useLoaderData } from "remix";
 import db from "~/db/db.server.js";
+import recipeStyles from "~/styles/Recipes.css";
+
+export function links() {
+  return [{ rel: "stylesheet", href: recipeStyles }];
+}
 
 export async function loader() {
   return db.data.recipes;
@@ -9,12 +14,9 @@ export default function RecipeItems() {
   const recipes = useLoaderData();
 
   return (
-    <div>
+    <div className="recipes-container">
       <div className="page-header">
         <h1>Recipes</h1>
-        <Link to="/recipes/new" className="btn">
-          New recipe
-        </Link>
       </div>
       <ul className="recipes-list">
         {recipes.map((recipe) => (
@@ -25,6 +27,9 @@ export default function RecipeItems() {
           </li>
         ))}
       </ul>
+      <Link to="/recipes/new" className="btn">
+          New recipe
+      </Link>
     </div>
   );
 }

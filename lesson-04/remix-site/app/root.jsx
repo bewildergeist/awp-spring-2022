@@ -1,12 +1,35 @@
 import { Link, Outlet, LiveReload, Links, Meta, Scripts } from "remix";
-import globalStylesUrl from "~/styles/global.css";
+import styles from "~/styles/global.css";
+import navStyles from "~/styles/Nav.css";
 
-export const links = () => [
-  {
-    rel: "stylesheet",
-    href: globalStylesUrl,
-  },
-];
+// export function links() {
+//   return [{ rel: "stylesheet", href: styles }];
+// }
+
+
+// export const links = () => [
+//   {
+//     rel: "stylesheet",
+//     href: globalStylesUrl,
+//   },
+// ];
+
+export function links() {
+  return [
+    {
+      rel: "stylesheet",
+      href: "https://unpkg.com/modern-css-reset@1.4.0/dist/reset.min.css",
+    },
+    {
+      rel: "stylesheet",
+      href: styles
+    },
+    {
+      rel: "stylesheet",
+      href: navStyles
+    }
+  ];
+}
 
 export const meta = () => ({
   description: "An example blog",
@@ -49,7 +72,7 @@ function Layout({ children }) {
         <Link to="/" className="logo">
           Remix Blog
         </Link>
-        <ul className="nav">
+        <ul className="nav nav-recipe">
           <Link to="/recipes">Recipes</Link>
         </ul>
       </nav>
