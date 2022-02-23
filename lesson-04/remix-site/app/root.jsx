@@ -1,6 +1,8 @@
 import { Link, Outlet, LiveReload, Links, Meta, Scripts } from "remix";
-import styles from "~/styles/global.css";
+import globalStyles from "~/styles/global.css";
 import navStyles from "~/styles/Nav.css";
+
+import styles from "~/tailwind.css";
 
 // export function links() {
 //   return [{ rel: "stylesheet", href: styles }];
@@ -23,6 +25,10 @@ export function links() {
     {
       rel: "stylesheet",
       href: styles
+    },
+    {
+      rel: "stylesheet",
+      href: globalStyles
     },
     {
       rel: "stylesheet",

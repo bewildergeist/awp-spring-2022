@@ -16,11 +16,11 @@ export default function RecipeItems() {
   return (
     <div className="recipes-container">
       <div className="page-header">
-        <h1>Recipes</h1>
+        <h1 className="text-2xl">Recipes</h1>
       </div>
-      <ul className="recipes-list">
+      <ul className="recipes-list flex flex-row flex-wrap">
         {recipes.map((recipe) => (
-          <li key={recipe.id}>
+          <li className="bg-gray-500 px-4 py-6 w-1/4 my-6 mx-1 rounded-lg text-center" key={recipe.id}>
             <Link to={recipe.id}>
               <h3>{recipe.title}</h3>
             </Link>
