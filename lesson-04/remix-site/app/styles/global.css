@@ -1,203 +1,67 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+@import "https://unpkg.com/open-props";
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+@use postcss-preset-env;
+
+:root {
+  --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  --background-body: #202122;
+  --text-main: white;
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  background-color: var(--background-body);
 }
 
-a {
-  text-decoration: none;
-  color: #000;
+h1 {
+  font-family: var(--font-sans);
+  color: var(--text-main);
 }
 
-ul {
-  list-style: none;
+.highlight-1 {
+  color: var(--blue-3);
 }
 
-p {
-  margin: 10px 0;
-}
+.button {
+  display: inline-flex;
+  white-space: nowrap;
+  
+  font-size: var(--font-size-fluid-1);
+  font-weight: var(--font-weight-7);
+  
+  padding-inline: var(--size-6);
+  padding-block: var(--size-3);
 
-.container {
-  width: 100%;
-  max-width: 960px;
-  margin: auto;
-  padding: 0 30px;
+  color: var(--blue-9);
+  border: var(--border-size-2) solid var(--blue-5);
+  background-color: transparent;
+  border-radius: var(--radius-2);
+
+}
+  
+  .button:hover {
+    cursor: pointer;
+    color: var(--blue-0);
+    background-color: var(--blue-5);
+  }
+  
+  .button:active {
+    position: relative;
+    inset-block-start: 2px;
+  }
+
+  .logo, .nav a {
+    color: var(--gray-0);
+    font-family: var(--font-sans);
+    text-decoration: none;
 }
 
 .logo {
-  font-size: x-large;
-  text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-  background-color: #f4f4f4;
-  padding: 10px 30px;
-  text-transform: uppercase;
-}
-
-.navbar ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar li {
-  margin-left: 20px;
-}
-
-.navbar ul li a {
-  color: #000;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.navbar ul li a:hover {
-  color: #333;
-  border-bottom: 1px solid #333;
-}
-
-.btn {
-  display: inline-block;
-  background: #000;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  border-radius: 5px;
-  cursor: pointer;
-  text-decoration: none;
-  font-size: 15px;
-  font-family: inherit;
-}
-
-.btn-reverse {
-  background: #fff;
-  color: #000;
-  border-color: #000;
-}
-
-.btn:focus {
-  outline: none;
-}
-
-.btn:active {
-  transform: scale(0.98);
-}
-
-.btn-block {
-  display: block;
-  width: 100%;
-}
-
-.btn-delete {
-  background: darkred;
-  color: #fff;
-  border-color: darkred;
-  font-size: 13px;
-  padding: 5px 10px;
-}
-
-.page-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.page-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 30px;
-}
-
-.form-control {
-  margin: 20px 0;
-}
-
-.form-control label {
-  display: block;
-}
-
-.form-control input,
-.form-control textarea {
-  width: 100%;
-  height: 40px;
-  margin: 5px;
-  padding: 3px 7px;
-  font-size: 17px;
-}
-
-.form-control textarea {
-  height: 200px;
-}
-
-.form-control-check {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.form-control-check label {
-  flex: 1;
-}
-
-.form-control-check input {
-  flex: 2;
-  height: 20px;
-}
-
-.posts-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.posts-list li {
-  padding: 20px;
-  border: 1px #333 solid;
-  border-radius: 5px;
-}
-
-.posts-list li h3 {
-  margin-bottom: 5px;
-}
-
-.error {
-  color: darkred;
-}
-
-.auth-container {
-  max-width: 600px;
-  margin: auto;
-}
-
-.auth-container h1 {
-  text-align: center;
-}
-
-.auth-container .pageHeader {
-  display: block;
-}
-
-.auth-container fieldset {
-  padding: 15px;
-  border-radius: 5px;
-}
-
-.auth-container fieldset label {
-  margin-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px 10px 10px;
 }
