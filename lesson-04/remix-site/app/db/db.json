@@ -29,28 +29,6 @@
         "potato",
         "sauce"
       ]
-    },
-    {
-      "id": "17f25c4b3da",
-      "title": "new recipe",
-      "body": "cool recipe",
-      "ingredients": "tomato, potato, sauce"
-    },
-    {
-      "id": "17f25c5871e",
-      "title": "new recipe",
-      "body": "cool recipe",
-      "ingredients": "tomato, potato, sauce"
-    },
-    {
-      "id": "17f25c7c443",
-      "title": "potato",
-      "body": "potato recipe",
-      "ingredients": [
-        "potato",
-        " cheese",
-        " juice"
-      ]
     }
   ]
 }
