@@ -1,21 +1,26 @@
 import { Link, Outlet, LiveReload, Links, Meta, Scripts } from "remix";
-import globalStylesUrl from "~/styles/global.css";
+// import globalStylesUrl from "~/styles/global.css";
+import styles from "./tailwind.css";
 
-export const links = () => [
-  {
-    rel: "stylesheet",
-    href: globalStylesUrl,
-  },
-];
+export function links() {
+  return [{ rel: "stylesheet", href: styles }];
+}
+
+// export const links = () => [
+//   {
+//     rel: "stylesheet",
+//     href: globalStylesUrl,
+//   },
+// ];
 
 export const meta = () => ({
-  description: "An example blog",
+  description: "An example recipe site",
   keywords: "remix, javascript",
 });
 
 export default function App() {
   return (
-    <Document title="Remix Blog">
+    <Document title="Remixed Recipes">
       <Layout>
         <Outlet />
       </Layout>
@@ -33,7 +38,7 @@ function Document({ children, title }) {
         <Links />
         <title>{title}</title>
       </head>
-      <body>
+      <body className="bg-gray-800 text-white">
         {children}
         {process.env.NODE_ENV === "development" ? <LiveReload /> : null}
         <Scripts />
@@ -45,15 +50,15 @@ function Document({ children, title }) {
 function Layout({ children }) {
   return (
     <>
-      <nav className="navbar">
-        <Link to="/" className="logo">
-          Remix Blog
+      <nav className="flex justify-between p-6">
+        <Link to="/" className="text-3xl">
+          Remixed Recipes
         </Link>
-        <ul className="nav">
-          <Link to="/posts">Posts</Link>
+        <ul className="">
+          <Link to="/recipes">Recipes</Link>
         </ul>
       </nav>
-      <div className="container">{children}</div>
+      <div className="flex justify-center h-full">{children}</div>
     </>
   );
 }
