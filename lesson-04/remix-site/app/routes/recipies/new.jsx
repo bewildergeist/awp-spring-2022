@@ -5,19 +5,27 @@ export const action = async ({ request }) => {
   const form = await request.formData();
   const title = form.get("title");
   const body = form.get("body");
+  const ingredients = form.get("ingredients");
+
+  let ingredientsArray = ingredients.split(",");
 
   const uuid = new Date().getTime().toString(16);
-  db.data.posts.push({ id: uuid, title, body });
+  db.data.recipies.push({
+    id: uuid,
+    title,
+    body,
+    ingredients: ingredientsArray,
+  });
   db.write();
-  return redirect(`/posts/${uuid}`);
+  return redirect(`/recipies/${uuid}`);
 };
 
-export default function NewPost() {
+export default function NewRecipie() {
   return (
     <>
       <div className="page-header">
-        <h1>New Post</h1>
-        <Link to="/posts" className="btn btn-reverse">
+        <h1>New Recipie</h1>
+        <Link to="/recipies" className="btn btn-reverse">
           Back
         </Link>
       </div>
@@ -28,11 +36,16 @@ export default function NewPost() {
             <input type="text" name="title" id="title" />
           </div>
           <div className="form-control">
-            <label htmlFor="body">Post body</label>
+            <label htmlFor="ingredients">Recipie ingredients</label>
+            <input type="text" name="ingredients" id="ingredients" />
+          </div>
+          <div className="form-control">
+            <label htmlFor="body">Recipie body</label>
             <textarea name="body" id="body"></textarea>
           </div>
+
           <button className="btn btn-block" type="submit">
-            Add Post
+            Add Recipie
           </button>
         </form>
       </div>

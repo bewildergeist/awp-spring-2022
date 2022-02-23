@@ -3,37 +3,44 @@ import { useLoaderData } from "remix";
 import db from "~/db/db.server";
 
 export const loader = async function ({ params }) {
-  const post = db.data.posts.find((p) => p.id === params.postId);
+  const recipie = db.data.recipies.find((p) => p.id === params.postId);
 
-  if (!post) {
-    throw new Error("Post not found");
+  if (!recipie) {
+    throw new Error("Recipie not found");
   }
   return {
-    post,
+    recipie,
   };
 };
 
 export const action = async function ({ request, params }) {
   const form = await request.formData();
   if (form.get("_method") === "delete") {
-    db.data.posts = db.data.posts.filter((p) => p.id !== params.postId);
+    db.data.recipies = db.data.posts.filter((p) => p.id !== params.postId);
     db.write();
-    return redirect("/posts");
+    return redirect("/recipies");
   }
 };
 
-export default function Post() {
-  const { post } = useLoaderData();
+export default function Recipie() {
+  const { recipie } = useLoaderData();
 
   return (
     <div>
       <div className="page-header">
-        <h1>{post.title}</h1>
+        <h1>{recipie.title}</h1>
         <Link to=".." className="btn btn-reverse">
           Back
         </Link>
       </div>
-      <p className="page-content">{post.body}</p>
+      <div className="page-content">
+        {recipie.body}
+        <ul>
+          {recipie.ingredients.map((ingredient, key) => {
+            return <li key={key}>{ingredient}</li>;
+          })}
+        </ul>
+      </div>
       <div className="page-footer">
         <form method="post">
           <input type="hidden" name="_method" value="delete" />
