@@ -1,21 +1,27 @@
 import { Link, Outlet, LiveReload, Links, Meta, Scripts } from "remix";
 import globalStylesUrl from "~/styles/global.css";
 
-export const links = () => [
-  {
-    rel: "stylesheet",
-    href: globalStylesUrl,
-  },
-];
+export function links() {
+  return [
+    {
+      rel: "stylesheet",
+      href: "https://unpkg.com/modern-css-reset@1.4.0/dist/reset.min.css",
+    },
+    {
+      rel: "stylesheet",
+      href: globalStylesUrl,
+    },
+  ];
+}
 
 export const meta = () => ({
-  description: "An example blog",
+  description: "A recipe blog",
   keywords: "remix, javascript",
 });
 
 export default function App() {
   return (
-    <Document title="Remix Blog">
+    <Document title="Recipe Blog">
       <Layout>
         <Outlet />
       </Layout>
@@ -47,10 +53,10 @@ function Layout({ children }) {
     <>
       <nav className="navbar">
         <Link to="/" className="logo">
-          Remix Blog
+          Recipe Blog
         </Link>
         <ul className="nav">
-          <Link to="/posts">Posts</Link>
+          <Link to="/recipes">Recipes</Link>
         </ul>
       </nav>
       <div className="container">{children}</div>

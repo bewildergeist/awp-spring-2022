@@ -1,0 +1,24 @@
+.home-page {
+     max-width: calc(2 * var(--size-14));
+     margin: 0 auto;
+}
+
+h1 {
+    color: var(--gray-0);
+    font-family: var(--font-sans);
+    font-size: var(--font-size-7);
+    margin-bottom: var(--size-6);
+}
+
+.blue {
+    color: var(--blue-3);  
+}
+
+.green {
+    color: var(--green-3);
+}
+
+.yellow {
+    color: var(--yellow-3);
+}
+
