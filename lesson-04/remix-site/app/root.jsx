@@ -1,21 +1,21 @@
 import { Link, Outlet, LiveReload, Links, Meta, Scripts } from "remix";
-import globalStylesUrl from "~/styles/global.css";
+import styles from "~/tailwind.css";
 
 export const links = () => [
   {
     rel: "stylesheet",
-    href: globalStylesUrl,
+    href: styles,
   },
 ];
 
 export const meta = () => ({
-  description: "An example blog",
-  keywords: "remix, javascript",
+  description: "A website blog to find delicious recipes.",
+  keywords: "food, recipe, blog, 🍪",
 });
 
 export default function App() {
   return (
-    <Document title="Remix Blog">
+    <Document title="Remixed Recipes">
       <Layout>
         <Outlet />
       </Layout>
@@ -25,7 +25,7 @@ export default function App() {
 
 function Document({ children, title }) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-stone-900 text-white">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -47,13 +47,12 @@ function Layout({ children }) {
     <>
       <nav className="navbar">
         <Link to="/" className="logo">
-          Remix Blog
+          <h1 className="text-white text-2xl font-extrabold text-center p-8 hover:text-red-300">
+            Remixed Recipes
+          </h1>
         </Link>
-        <ul className="nav">
-          <Link to="/posts">Posts</Link>
-        </ul>
       </nav>
-      <div className="container">{children}</div>
+      <div>{children}</div>
     </>
   );
 }
