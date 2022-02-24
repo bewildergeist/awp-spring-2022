@@ -1,5 +1,5 @@
 import { Link, Outlet, LiveReload, Links, Meta, Scripts } from "remix";
-import styles from "~/styles/Home.css";
+import styles from "~/tailwind.css";
 
 export const links = () => [
   {
@@ -25,7 +25,7 @@ export default function App() {
 
 function Document({ children, title }) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-stone-900 text-white">
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -47,10 +47,12 @@ function Layout({ children }) {
     <>
       <nav className="navbar">
         <Link to="/" className="logo">
-          Remixed Recipes
+          <h1 className="text-white text-2xl font-extrabold text-center p-8 hover:text-red-300">
+            Remixed Recipes
+          </h1>
         </Link>
       </nav>
-      <div className="container">{children}</div>
+      <div>{children}</div>
     </>
   );
 }
