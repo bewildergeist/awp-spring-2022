@@ -1,0 +1,30 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Small shirts 👕",
+      "description": "If your kid is small."
+    },
+    {
+      "id": "2",
+      "title": "Medium shirts 👕",
+      "description": "If your kid is medium sized"
+    },
+    {
+      "id": "3",
+      "title": "Large shirts 👕",
+      "description": "If your kid is big.",
+      "longdescription": ""
+    },
+    {
+      "id": "4",
+      "title": "XL shirts 👕",
+      "description": "If your kid is very big."
+    },
+    {
+      "id": "XXL shirts",
+      "title": "Large shirts 👕",
+      "description": "If your kid is too big."
+    }
+  ]
+}
