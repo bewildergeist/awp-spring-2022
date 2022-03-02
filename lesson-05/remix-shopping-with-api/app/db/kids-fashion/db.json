@@ -3,28 +3,32 @@
     {
       "id": "1",
       "title": "Small shirts 👕",
-      "description": "If your kid is small."
+      "description": "Suitable if your kid is small.",
+      "longdescription": "🟡🔴🟡 Buy 2 get 0 free! 🟡🔴🟡"
     },
     {
       "id": "2",
       "title": "Medium shirts 👕",
-      "description": "If your kid is medium sized"
+      "description": "Suitable if your kid is medium sized.",
+      "longdescription": "🟡🔴🟡 Buy 2 get 0 free! 🟡🔴🟡"
     },
     {
       "id": "3",
       "title": "Large shirts 👕",
-      "description": "If your kid is big.",
-      "longdescription": ""
+      "description": "Suitable if your kid is big.",
+      "longdescription": "🟡🔴🟡 Buy 2 get 0 free! 🟡🔴🟡"
     },
     {
       "id": "4",
       "title": "XL shirts 👕",
-      "description": "If your kid is very big."
+      "description": "Suitable if your kid is very big.",
+      "longdescription": "🟡🔴🟡 Buy 2 get 0 free! 🟡🔴🟡"
     },
     {
-      "id": "XXL shirts",
-      "title": "Large shirts 👕",
-      "description": "If your kid is too big."
+      "id": "5",
+      "title": "XXL shirts 👕",
+      "description": "Suitable if your kid is very very big.",
+      "longdescription": "🟡🔴🟡 Buy 2 get 7 free! 🟡🔴🟡"
     }
   ]
 }

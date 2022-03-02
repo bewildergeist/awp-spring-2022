@@ -35,8 +35,9 @@ export default function Post() {
     <div>
       <Breadcrumb links={[{ to: "/kids-fashion", title: "Kids Fashion" }]} />
       <PageHeader title={product.title} />
+      <h1 className="text-xl font-black mb-12">{product.longdescription}</h1>
       <p>{product.description}</p>
-      <p>{product.longdescription}</p>
+
       <form method="post" className="mt-5 pt-2 border-t border-gray-200">
         <input type="hidden" name="_method" value="delete" />
         <Button type="submit" destructive>
