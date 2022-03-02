@@ -4,6 +4,7 @@ import PageHeader from "~/components/PageHeader";
 import Button from "~/components/Button.jsx";
 import Breadcrumb from "~/components/Breadcrumb.jsx";
 import db from "~/db/toys/db.server";
+import LinkButton from "~/components/LinkButton.jsx";
 
 export const loader = async function ({ params }) {
   const product = await fetch(
@@ -45,13 +46,19 @@ export default function Post() {
           <p className="font-bold">
             Category: <span className="font-normal">{product.category}</span>
           </p>
-          <p>{product.description}</p>
-          <form method="post" className="mt-5 pt-2 border-t border-gray-200">
-            <input type="hidden" name="_method" value="delete" />
-            <Button type="submit" destructive>
-              Delete
-            </Button>
-          </form>
+          <p className="pb-2 border-b border-gray-200">{product.description}</p>
+
+          <div className="flex">
+            <LinkButton to="update" className="">
+              Update
+            </LinkButton>
+            <form method="post" className="mt-2">
+              <input type="hidden" name="_method" value="delete" />
+              <Button type="submit" destructive>
+                Delete
+              </Button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

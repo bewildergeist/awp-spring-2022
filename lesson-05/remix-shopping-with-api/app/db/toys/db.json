@@ -11,14 +11,13 @@
       "imageAlt": "Baby Yoda"
     },
     {
-      "id": "2",
       "title": "Application controlled 4x4 Mercedes-Benz Zetros, 5 Piece",
-      "description": "Lego Mercedes-Benz",
-      "rating": 4.1,
+      "description": "Build an authentic model version of the 4x4 Mercedes-Benz Zetros Trial Truck. Then put it to the test using the Control plus app.",
+      "price": "299.99",
       "image": "https://slimages.macysassets.com/is/image/MCY/products/3/optimized/20653173_fpx.tif",
-      "price": 299.99,
       "category": "Engineering toys",
-      "imageAlt": "Lego Mercedes-Benz"
+      "rating": "4.1",
+      "id": "2"
     },
     {
       "title": "Funko Street Fighter Dan Pop Games Figure",
