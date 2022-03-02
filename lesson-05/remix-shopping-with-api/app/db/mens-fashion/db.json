@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Jeans",
+      "description": "Slim ripped biker jeans",
+      "price": "1600",
+      "image": "https://media.boohooman.com/i/boohooman/mzz74040_blue_xl?pdp.template"
+    },
+    {
+      "id": "3",
+      "title": "Sneakers",
+      "description": "Gucci sneaks with snakes",
+      "price": "2250",
+      "image": "https://i.pinimg.com/736x/43/0c/2d/430c2d979d4b93d40ae072b25b4f14d6.jpg"
+    },
+    {
+      "title": "Boohoo Man",
+      "description": "Green hoodie",
+      "image": "https://media.boohooman.com/i/boohooman/amm01128_green_xl?$product_image_tile_tablet_landscape_pro_2x$&fmt=webp",
+      "price": "150",
+      "id": "17f4a660cf7"
+    },
+    {
+      "title": "Fat Moose",
+      "description": "HUGH - Fleecejakker",
+      "image": "https://img01.ztat.net/article/spp-media-p1/99860b50b96e455e8685691e6e6d04ed/8df7348216d44b3a82f5ecc76f3764e0.jpg?imwidth=762",
+      "price": "699",
+      "id": "17f4a66bb0d"
+    }
+  ]
+}
