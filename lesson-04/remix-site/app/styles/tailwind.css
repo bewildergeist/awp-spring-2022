@@ -9,9 +9,14 @@
 }
 @layer base {
   h1 {
-    @apply text-red-600 font;
+    @apply text-red-600;
   }
   body {
     @apply bg-slate-800;
+  }
+}
+@layer utilities {
+  .btn-red {
+    background-color: red;
   }
 }
