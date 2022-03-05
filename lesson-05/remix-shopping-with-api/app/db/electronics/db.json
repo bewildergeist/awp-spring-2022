@@ -1,0 +1,14 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "title": "Laptop",
+      "description": "Perfect for coding!"
+    },
+    {
+      "id": "3",
+      "title": "Headphones",
+      "description": "You will not hear anything else"
+    }
+  ]
+}
