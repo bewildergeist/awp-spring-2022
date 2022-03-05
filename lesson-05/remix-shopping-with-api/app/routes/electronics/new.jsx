@@ -8,13 +8,13 @@ export const action = async ({ request }) => {
   const form = await request.formData();
   const title = form.get("title");
   const description = form.get("description");
-
+  const image = form.get("image");
   const uuid = new Date().getTime().toString(16);
   // TODO: Make a POST request via fetch to an API route that receives JSON data
   // and creates the product in the db
   await fetch("http://localhost:3000/api/electronics/", {
     method: "POST",
-    body: JSON.stringify({ title, description, id: uuid }),
+    body: JSON.stringify({ title, description, image, id: uuid }),
     headers: {
       "Content-Type": "application/json",
     },
@@ -42,6 +42,8 @@ export default function NewProduct() {
             id="description"
             className="border p-1 border-gray-200 w-full"
           ></textarea>
+          <Label htmlFor='image'>image link</Label>
+          <input type='text' name='image' id='image'></input>
           <div className="mt-3">
             <Button type="submit">Add product</Button>
           </div>

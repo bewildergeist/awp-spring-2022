@@ -18,9 +18,12 @@ export default function ElectronicsItems() {
         {products.map((product) => (
           <li
             key={product.id}
-            className="rounded border border-gray-200 bg-gray-50 p-5"
+            className="rounded border text-center border-blue-500 bg-gray-50 p-8 
+            text-2xl hover:bg-blue-500 hover:text-gray-50 transition duration-250 hover:ease-in-out
+            "
           >
             <Link to={product.id} className="font-semibold">
+              <img className="object-scale-down h-48 w-96" src={product.image} />
               <h3>{product.title}</h3>
             </Link>
           </li>
