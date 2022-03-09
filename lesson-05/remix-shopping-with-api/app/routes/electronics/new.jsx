@@ -1,4 +1,5 @@
 import { Form, redirect, useActionData, json  } from "remix";
+import { Link, redirect } from "remix";
 import Button from "~/components/Button.jsx";
 import PageHeader from "~/components/PageHeader";
 import Breadcrumb from "~/components/Breadcrumb.jsx";
@@ -22,11 +23,13 @@ export const action = async ({ request }) => {
   }
 
 
+  const uuid = new Date().getTime().toString(16);
   // TODO: Make a POST request via fetch to an API route that receives JSON data
   // and creates the product in the db
   await fetch("http://localhost:3000/api/electronics/", {
     method: "POST",
     body: JSON.stringify({ title, description, image, id: uuid }),
+    body: JSON.stringify({ title, description, id: uuid }),
     headers: {
       "Content-Type": "application/json",
     },
@@ -37,6 +40,7 @@ export const action = async ({ request }) => {
 
 export default function NewProduct() {
   const actionData = useActionData();
+export default function NewProduct() {
   return (
     <>
       <Breadcrumb links={[{ to: "/eletronics", title: "Electronics" }]} />
@@ -44,6 +48,8 @@ export default function NewProduct() {
       <div>
         <Form reloadDocument method="post" className="w-64">
           <Label required htmlFor="title">Title</Label>
+        <form method="post" className="w-64">
+          <Label htmlFor="title">Title</Label>
           <input
             type="text"
             name="title"
@@ -56,6 +62,7 @@ export default function NewProduct() {
           {actionData.errors.title}
         </p>
       ) : null}
+          />
           <Label htmlFor="description">Description</Label>
           <textarea
             name="description"
@@ -84,6 +91,11 @@ export default function NewProduct() {
             <Button type="submit">Add product</Button>
           </div>
         </Form>
+          ></textarea>
+          <div className="mt-3">
+            <Button type="submit">Add product</Button>
+          </div>
+        </form>
       </div>
     </>
   );
