@@ -1,5 +1,3 @@
-
-import { Form, redirect, useActionData, json  } from "remix";
 import { Form, redirect, useActionData, json, useTransition } from "remix";
 import Button from "~/components/Button.jsx";
 import PageHeader from "~/components/PageHeader";
@@ -46,6 +44,8 @@ export const action = async ({ request }) => {
 
 export default function NewProduct() {
   const actionData = useActionData();
+  let transition = useTransition();
+  let isAdding = transition.state === "submitting" && transition.submission.formData.get("_action") === "create";
   return (
     <>
       <Breadcrumb links={[{ to: "/eletronics", title: "Electronics" }]} />
