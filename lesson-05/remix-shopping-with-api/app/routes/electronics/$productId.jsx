@@ -42,9 +42,6 @@ export default function Post() {
       <form method="post" className="mt-5 pt-2 border-t border-gray-200">
         <input type="hidden" name="_method" value="delete" />
         <Button type="submit" destructive >
-      <form method="post" className="mt-5 pt-2 border-t border-gray-200">
-        <input type="hidden" name="_method" value="delete" />
-        <Button type="submit" destructive>
           Delete
         </Button>
       </form>
