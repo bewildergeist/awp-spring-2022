@@ -23,10 +23,11 @@ export default function ElectronicsItems() {
             "
           >
             <Link to={product.id} className="font-semibold">
-              <img className="object-scale-down h-48 w-96" src={product.image} />
-            className="rounded border border-gray-200 bg-gray-50 p-5"
-          >
-            <Link to={product.id} className="font-semibold">
+              <img
+                className="object-scale-down h-48 w-96"
+                src={product.image}
+              />
+              className="rounded border border-gray-200 bg-gray-50 p-5"
               <h3>{product.title}</h3>
             </Link>
           </li>
