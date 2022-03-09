@@ -1,9 +1,9 @@
-import { Link, redirect } from "remix";
+import { json, Link, redirect, useActionData, Form } from "remix";
 import Button from "~/components/Button.jsx";
 import PageHeader from "~/components/PageHeader";
 import Breadcrumb from "~/components/Breadcrumb.jsx";
 import db from "~/db/pet-supplies/db.server";
-import { useLoaderData } from "remix";
+import { useLoaderData, useTransition } from "remix";
 
 export const loader = async ({ params }) => {
   const product = await fetch(
@@ -22,6 +22,15 @@ export const action = async ({ request, params }) => {
   const title = form.get("title");
   const description = form.get("description");
 
+  const errors = {};
+
+  if (!title) errors.title = true;
+  if (!description) errors.description = true;
+
+  if (Object.keys(errors).length) {
+    return json(errors);
+  }
+
   await fetch(`http://localhost:3000/api/pet-supplies/${params.productId}`, {
     method: "PUT",
     body: JSON.stringify({ title, description, id: params.productId }),
@@ -36,12 +45,14 @@ export const action = async ({ request, params }) => {
 
 export default function EditProduct() {
   const product = useLoaderData();
+  const errors = useActionData();
+  const transition = useTransition();
   return (
     <>
       <Breadcrumb links={[{ to: "/pet-supplies", title: "Pet supplies" }]} />
       <PageHeader title="Edit product" subtitle="Make it a good one" />
       <div>
-        <form method="post" className="w-64">
+        <Form method="post" className="w-64">
           <Label htmlFor="title">Title</Label>
           <input
             type="text"
@@ -50,6 +61,13 @@ export default function EditProduct() {
             id="title"
             className="border p-1 border-gray-200 w-full"
           />
+          <p>
+            <label>
+              {errors?.title ? (
+                <em style={{ color: "red" }}>Write your new title</em>
+              ) : null}
+            </label>
+          </p>
           <Label htmlFor="description">Description</Label>
           <textarea
             name="description"
@@ -57,10 +75,21 @@ export default function EditProduct() {
             defaultValue={product.description}
             className="border p-1 border-gray-200 w-full"
           ></textarea>
+          <p>
+            <label>
+              {errors?.description ? (
+                <em style={{ color: "red" }}>Write your new description</em>
+              ) : null}
+            </label>
+          </p>
           <div className="mt-3">
-            <Button type="submit">Add product</Button>
+            <Button type="submit">
+              {transition.state === "submitting"
+                ? "Adding product..."
+                : "Add product"}
+            </Button>
           </div>
-        </form>
+        </Form>
       </div>
     </>
   );
