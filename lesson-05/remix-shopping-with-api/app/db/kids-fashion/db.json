@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Small shirts 👕",
+      "description": "Suitable if your kid is small.",
+      "longdescription": "🟡🔴🟡 Buy 2 get 0 free! 🟡🔴🟡"
+    },
+    {
+      "id": "2",
+      "title": "Medium shirts 👕",
+      "description": "Suitable if your kid is medium sized.",
+      "longdescription": "🟡🔴🟡 Buy 2 get 0 free! 🟡🔴🟡"
+    },
+    {
+      "id": "3",
+      "title": "Large shirts 👕",
+      "description": "Suitable if your kid is big.",
+      "longdescription": "🟡🔴🟡 Buy 2 get 0 free! 🟡🔴🟡"
+    },
+    {
+      "id": "4",
+      "title": "XL shirts 👕",
+      "description": "Suitable if your kid is very big.",
+      "longdescription": "🟡🔴🟡 Buy 2 get 0 free! 🟡🔴🟡"
+    },
+    {
+      "id": "5",
+      "title": "XXL shirts 👕",
+      "description": "Suitable if your kid is very very big.",
+      "longdescription": "🟡🔴🟡 Buy 2 get 7 free! 🟡🔴🟡"
+    },
+    {
+      "id": "6",
+      "title": "Ice cream 🍦",
+      "description": "Buy an ice cream while you are shopping kids fashion",
+      "longdescription": "Extra cold ❄️"
+    }
+  ]
+}
