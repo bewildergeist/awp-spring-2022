@@ -11,9 +11,24 @@ export const action = async ({ request }) => {
   const description = form.get("description");
 
   const uuid = new Date().getTime().toString(16);
+
+  let body = {
+    title,
+    description,
+    id: uuid,
+  };
+
+  await fetch(`http://localhost:3000/api/kids-fashion/`, {
+    method: "POST",
+    body: JSON.stringify(body),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  });
   // TODO: Make a POST request via fetch to an API route that receives JSON data
   // and creates the product in the db
-  throw new Error("POST handler not implemented");
+  // throw new Error("POST handler not implemented");
+
   return redirect(`/kids-fashion/${uuid}`);
 };
 

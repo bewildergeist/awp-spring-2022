@@ -1,12 +1,6 @@
 {
   "products": [
     {
-      "id": "1",
-      "title": "Small shirts 👕",
-      "description": "Suitable if your kid is small.",
-      "longdescription": "🟡🔴🟡 Buy 2 get 0 free! 🟡🔴🟡"
-    },
-    {
       "id": "2",
       "title": "Medium shirts 👕",
       "description": "Suitable if your kid is medium sized.",
@@ -31,10 +25,9 @@
       "longdescription": "🟡🔴🟡 Buy 2 get 7 free! 🟡🔴🟡"
     },
     {
-      "id": "6",
-      "title": "Ice cream 🍦",
-      "description": "Buy an ice cream while you are shopping kids fashion",
-      "longdescription": "Extra cold ❄️"
+      "title": "test",
+      "description": "tester",
+      "id": "17f6e08774e"
     }
   ]
 }
