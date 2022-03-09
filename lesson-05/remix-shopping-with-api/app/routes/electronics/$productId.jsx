@@ -40,7 +40,7 @@ export default function Post() {
   let isDeleting = transition.state === "submitting"
     && transition.submission.formData.get("_action") === "delete";
   return (
-    <div className={isDeleting ? "opacity-50" : ""}>
+    <div className={isDeleting ? "opacity-75" : ""}>
       <Breadcrumb links={[{ to: "/electronics", title: "Electronics" }]} />
       <PageHeader title={product.title} />
       <p>{product.description}</p>
@@ -54,7 +54,8 @@ export default function Post() {
           destructive
               disabled={isDeleting}
               name="_action"
-              value="delete"
+          value="delete"
+          className="deleteButton"
             >
               {isDeleting ? "Deleting product..." : "Delete product"}
               </button>
