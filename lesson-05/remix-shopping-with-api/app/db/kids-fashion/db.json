@@ -1,12 +1,6 @@
 {
   "products": [
     {
-      "id": "1",
-      "title": "Small shirts 👕",
-      "description": "Suitable if your kid is small.",
-      "longdescription": "🟡🔴🟡 Buy 2 get 0 free! 🟡🔴🟡"
-    },
-    {
       "id": "2",
       "title": "Medium shirts 👕",
       "description": "Suitable if your kid is medium sized.",
@@ -31,14 +25,9 @@
       "longdescription": "🟡🔴🟡 Buy 2 get 7 free! 🟡🔴🟡"
     },
     {
-      "title": "try",
-      "description": "my best",
-      "id": "17f4ab5c2fc"
-    },
-    {
-      "title": "test",
-      "description": "test",
-      "id": "17f6a17efb5"
+      "title": "dasdsadasd",
+      "description": "lkasdkladskj",
+      "id": "17f6ea5e359"
     }
   ]
 }
