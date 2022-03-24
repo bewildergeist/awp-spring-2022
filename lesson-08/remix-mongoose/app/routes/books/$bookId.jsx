@@ -6,7 +6,7 @@ export async function loader({ params }) {
   const book = await db.models.Book.findById(params.bookId);
 
     if (!book){
-      throw new Response ("Not found", {status 400});
+      throw new Response ("Not found", {status 404});
     }
     return JSON(book);
 }
@@ -35,3 +35,4 @@ export function catachBoudary () {
   </div>
   );
 }
+

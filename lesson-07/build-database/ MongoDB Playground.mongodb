@@ -13,7 +13,7 @@ use(database);
 db.books.deleteMany({title: "Fight Club"})
 
 //insert books
-db.books.insertOne(
+db.books.insertMany(
    {
       title: "Fight Club",
       author: "Chuck Palahniuk",
@@ -27,10 +27,23 @@ db.books.insertOne(
         publicationDate: "2006-05-01",
         publisher: "vintage publishing",
         starRating: 5,
-        categories: "Contemporary Fiction",
-        reviews: 
+        categories: "Contemporary Fiction", 
+   },
 
-
+      {
+      title: "wrong Club",
+      author: "Chuck Palahniuk",
+      price: 78.82,
+      currency: "DKK",
+      isbn13: "9780099765219",
+      description: "Every weekend, in basements and parking lots across the country, young men with good white-collar jobs and absent fathers take off their shoes and shirts and fight each other barehanded for as long as they have to. Then they go back to those jobs with blackened eyes and loosened teeth and the sense that they can handle anything. Fight Club is the invention of Tyler Durden, projectionist, waiter and dark, anarchic genius. And it's only the beginning of his plans for revenge on a world where cancer support groups have the corner on human warmth.",
+        starRating: 4.19,
+        ratingsCount: 534300,
+        language: "English",
+        publicationDate: "2006-05-01",
+        publisher: "vintage publishing",
+        starRating: 5,
+        categories: "Contemporary Fiction", 
    }
 )
 
