@@ -1,0 +1,32 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Star Wars The Child Animatronic Edition",
+      "description": "Baby Yoda",
+      "rating": 4.8,
+      "image": "https://slimages.macysassets.com/is/image/MCY/products/7/optimized/19046367_fpx.tif",
+      "price": 62.99,
+      "category": "Action figure",
+      "imageAlt": "Baby Yoda"
+    },
+    {
+      "title": "Application controlled 4x4 Mercedes-Benz Zetros, 5 Piece",
+      "description": "Build an authentic model version of the 4x4 Mercedes-Benz Zetros Trial Truck. Then put it to the test using the Control plus app.",
+      "price": "299.99",
+      "image": "https://slimages.macysassets.com/is/image/MCY/products/3/optimized/20653173_fpx.tif",
+      "category": "Engineering toys",
+      "rating": "4.1",
+      "id": "2"
+    },
+    {
+      "title": "Funko Street Fighter Dan Pop Games Figure",
+      "description": "From Street Fighter, Dan, as a stylized POP vinyl from Funko\r\nStylized collectable stands 3 ¾ inches tall, perfect for any Street Fighter fan\r\nCollect and display all Street Fighter POP Vinyls",
+      "price": "22.56",
+      "image": "https://m.media-amazon.com/images/I/51g096LkvRL._AC_.jpg",
+      "category": "Figure",
+      "rating": "4.7",
+      "id": "17f4a654df1"
+    }
+  ]
+}
