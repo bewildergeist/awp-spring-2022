@@ -9,13 +9,19 @@ import {
   useCatch,
 } from "remix";
 import styles from "~/tailwind.css";
+import style from "~/buttons.css";
 
 export const links = () => [
   {
     rel: "stylesheet",
     href: styles,
   },
+  {
+    rel: "stylesheet",
+    href: style,
+  },
 ];
+
 
 export const meta = () => ({
   description: "A collection of great recipes",
