@@ -1,11 +1,4 @@
-import {
-  Link,
-  redirect,
-  useActionData,
-  Form,
-  json,
-  useTransition,
-} from "remix";
+import { Link, redirect, useActionData, Form, json } from "remix";
 import Button from "~/components/Button.jsx";
 import PageHeader from "~/components/PageHeader";
 import Breadcrumb from "~/components/Breadcrumb.jsx";
@@ -44,47 +37,40 @@ export const action = async ({ request }) => {
 
 export default function NewProduct() {
   const actionData = useActionData();
-  const transition = useTransition();
   return (
     <>
       <Breadcrumb links={[{ to: "/kids-fashion", title: "Kids fashion" }]} />
       <PageHeader title="New product" subtitle="Make it a good one" />
       <div>
         <Form method="post" className="w-64">
-          <fieldset disabled={transition.state === "submitting"}>
-            <Label htmlFor="title">Title</Label>
-            <input
-              type="text"
-              name="title"
-              id="title"
-              defaultValue={actionData?.values.title}
-              className="border p-1 border-gray-200 w-full"
-            />
+          <Label htmlFor="title">Title</Label>
+          <input
+            type="text"
+            name="title"
+            id="title"
+            defaultValue={actionData?.values.title}
+            className="border p-1 border-gray-200 w-full"
+          />
 
-            {actionData?.errors.name ? (
-              <p style={{ color: "red" }}>{actionData.errors.name}</p>
-            ) : null}
+          {actionData?.errors.name ? (
+            <p style={{ color: "red" }}>{actionData.errors.name}</p>
+          ) : null}
 
-            <Label htmlFor="description">Description</Label>
-            <textarea
-              name="description"
-              id="description"
-              defaultValue={actionData?.values.description}
-              className="border p-1 border-gray-200 w-full"
-            ></textarea>
+          <Label htmlFor="description">Description</Label>
+          <textarea
+            name="description"
+            id="description"
+            defaultValue={actionData?.values.description}
+            className="border p-1 border-gray-200 w-full"
+          ></textarea>
 
-            {actionData?.errors.description ? (
-              <p style={{ color: "red" }}>{actionData.errors.description}</p>
-            ) : null}
+          {actionData?.errors.description ? (
+            <p style={{ color: "red" }}>{actionData.errors.description}</p>
+          ) : null}
 
-            <div className="mt-3">
-              <Button type="submit">
-                {transition.state === "submitting"
-                  ? "Adding product..."
-                  : "Add product"}
-              </Button>
-            </div>
-          </fieldset>
+          <div className="mt-3">
+            <Button type="submit">Add product</Button>
+          </div>
         </Form>
       </div>
     </>
