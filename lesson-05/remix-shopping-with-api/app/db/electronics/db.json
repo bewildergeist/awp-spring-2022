@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Fridge",
+      "description": "Coolest fridge on the market!",
+      "image": "https://mir-s3-cdn-cf.behance.net/projects/404/8324a2100570065.Y3JvcCwxNDM4LDExMjUsMzIsMA.png"
+    },
+    {
+      "id": "2",
+      "title": "Laptop",
+      "description": "Perfect for coding!",
+      "image": "https://www.lenovo.com/medias/lenovo-laptop-thinkpad-x1-nano-13-subseries-hero.png?context=bWFzdGVyfHJvb3R8MTc0ODE0fGltYWdlL3BuZ3xoN2QvaDJjLzExMDgxOTgyNjcyOTI2LnBuZ3w0NmI4YWMwM2M1MjhhNDRjYTM1MTMwZDYzNGJmODFmODJmZDMzMDY4MjVhMTI2M2EwNGEyODkxYjAyMjZkY2Vi"
+    },
+    {
+      "id": "3",
+      "title": "Headphones",
+      "description": "You will not hear anything else",
+      "image": "https://cdn.shopify.com/s/files/1/1706/9177/products/cq5dam.web.600.600_1.png?v=1637310097"
+    },
+    {
+      "title": "Smartwatch",
+      "description": "Garmin smartwarch",
+      "image": "https://emedyczny.com/public/upload/editor/wlt10/cz_8.png",
+      "id": "17f5c59cdc3"
+    }
+  ]
+}
