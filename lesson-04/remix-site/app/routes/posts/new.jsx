@@ -7,8 +7,7 @@ export const action = async ({ request }) => {
   const body = form.get("body");
 
   const uuid = new Date().getTime().toString(16);
-  db.data.posts.push({ id: uuid, title, body });
-  db.write();
+  v;
   return redirect(`/posts/${uuid}`);
 };
 
