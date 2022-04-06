@@ -1,19 +1,71 @@
 {
-  "posts": [
+  "recipes": [
     {
       "id": "1",
-      "title": "Post 1",
-      "body": "This is test post #1"
+      "title": "Lasange",
+      "body": "Vegan lasange",
+      "ingredients": [
+        "Meat",
+        "Sausage",
+        "Cheese",
+        "Chicken"
+      ]
     },
     {
       "id": "2",
-      "title": "Post 2",
-      "body": "This is test post #2"
+      "title": "Pesto salat",
+      "body": "With chicken and nuts",
+      "ingredients": [
+        "Salat",
+        "Chicken",
+        "x",
+        "Tomato"
+      ]
     },
     {
       "id": "3",
-      "title": "Post 3",
-      "body": "This is test post #3"
+      "title": "Sushi",
+      "body": "Roll them together",
+      "ingredients": [
+        "Rice",
+        "Fish",
+        "Avocado",
+        "Seaweed"
+      ]
+    },
+    {
+      "id": "17f2618c865",
+      "title": "TKHTU",
+      "body": "4R4JKNKL4J3NRLK4\r\n"
+    },
+    {
+      "id": "17f2618c865",
+      "title": "TKHTU",
+      "ingredients": [
+        "4RK4NLJN4R"
+      ],
+      "body": "4R4JKNKL4J3NRLK4\r\n"
+    },
+    {
+      "id": "17f261d61c0",
+      "title": "TTT",
+      "body": "DKJHKDB"
+    },
+    {
+      "id": "17f261d61c0",
+      "title": "TTT",
+      "ingredients": [
+        "KEDHK"
+      ],
+      "body": "DKJHKDB"
+    },
+    {
+      "id": "17f261e389b",
+      "title": "HKJH",
+      "ingredients": [
+        "KJHKJ"
+      ],
+      "body": "YGUYGUYGUY"
     }
   ]
 }
