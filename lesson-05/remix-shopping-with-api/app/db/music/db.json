@@ -1,0 +1,28 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "artist": "Tyler The Creator",
+      "title": "Call Me If You Get Lost",
+      "img": "https://media.pitchfork.com/photos/60cb72ddadc2201193add729/1:1/w_3000,h_3000,c_limit/Tyler-the-Creator.jpg"
+    },
+    {
+      "id": "2",
+      "artist": "Olivia Rodrigo",
+      "title": "Sour",
+      "img": "https://media.pitchfork.com/photos/6076fd2e17d37fe4717d4907/1:1/w_3000,h_3000,c_limit/Olivia-Rodrigo-SOUR.jpeg"
+    },
+    {
+      "id": "3",
+      "artist": "Little Simz",
+      "title": "Sometimes I Might Be Introvert",
+      "img": "https://m.media-amazon.com/images/I/61wYNBVaXlS._SL1200_.jpg"
+    },
+    {
+      "id": "4",
+      "artist": "Japanese Breakfast",
+      "title": "Jubilee",
+      "img": "https://media.pitchfork.com/photos/603d5455040c463283888ec6/1:1/w_3000,h_3000,c_limit/Japanese%20Breakfast%20-%20Jubilee%20_%20Album%20Art.jpg"
+    }
+  ]
+}
