@@ -1,12 +1,16 @@
 import { useLoaderData, Link } from "@remix-run/react";
 import connectDb from "~/db/connectDb.server.js";
+import { requireUserSession } from "../sessions.server";
 
-export async function loader() {
-  // TODO: Verify that the user is authenticated, otherwise redirect to login page
+export async function loader({ request, params }) {
+  // Verify that the user is authenticated, otherwise redirect to login page
   const db = await connectDb();
-  // TODO: Get the `userId` from the session and filter the books to only return
-  // those belonging to the current user
-  const books = await db.models.Book.find();
+  const session = await requireUserSession(request);
+  const userId = session.get("userId");
+
+  // Get the `userId` from the session and filter the books to only return those belonging to the current user
+  const books = await db.models.Book.find({ userId: userId });
+
   return books;
 }
 
@@ -25,7 +29,8 @@ export default function Index() {
             <li key={book._id}>
               <Link
                 to={`/books/${book._id}`}
-                className="text-blue-600 hover:underline">
+                className="text-blue-600 hover:underline"
+              >
                 {book.title}
               </Link>
             </li>
