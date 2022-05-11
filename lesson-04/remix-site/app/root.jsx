@@ -15,7 +15,7 @@ export const meta = () => ({
 
 export default function App() {
   return (
-    <Document title="Remix Blog">
+    <Document title="Remix Recipes">
       <Layout>
         <Outlet />
       </Layout>
@@ -47,10 +47,10 @@ function Layout({ children }) {
     <>
       <nav className="navbar">
         <Link to="/" className="logo">
-          Remix Blog
+          Remix Recipes
         </Link>
         <ul className="nav">
-          <Link to="/posts">Posts</Link>
+          <Link to="/recipes">Recipes</Link>
         </ul>
       </nav>
       <div className="container">{children}</div>
