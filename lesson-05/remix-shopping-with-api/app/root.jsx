@@ -100,7 +100,8 @@ function MenuLink({ to, children }) {
         `block hover:bg-gray-200 transition-all text-lg font-bold px-4 py-1 ${
           isActive ? "bg-gray-200" : ""
         }`
-      }>
+      }
+    >
       {children}
     </NavLink>
   );
