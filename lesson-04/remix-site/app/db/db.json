@@ -1,19 +1,56 @@
 {
-  "posts": [
+  "recipes": [
     {
       "id": "1",
-      "title": "Post 1",
-      "body": "This is test post #1"
+      "title": "Recipe 1",
+      "body": "This is test recipe #1",
+      "ingredients": [
+        "tomato",
+        "potato",
+        "sauce"
+      ]
     },
     {
       "id": "2",
-      "title": "Post 2",
-      "body": "This is test post #2"
+      "title": "Recipe 2",
+      "body": "This is test recipe #2",
+      "ingredients": [
+        "tomato",
+        "potato",
+        "sauce"
+      ]
     },
     {
       "id": "3",
-      "title": "Post 3",
-      "body": "This is test post #3"
+      "title": "Recipe 3",
+      "body": "This is test recipe #3",
+      "ingredients": [
+        "tomato",
+        "potato",
+        "sauce"
+      ]
+    },
+    {
+      "id": "17f25c4b3da",
+      "title": "new recipe",
+      "body": "cool recipe",
+      "ingredients": "tomato, potato, sauce"
+    },
+    {
+      "id": "17f25c5871e",
+      "title": "new recipe",
+      "body": "cool recipe",
+      "ingredients": "tomato, potato, sauce"
+    },
+    {
+      "id": "17f25c7c443",
+      "title": "potato",
+      "body": "potato recipe",
+      "ingredients": [
+        "potato",
+        " cheese",
+        " juice"
+      ]
     }
   ]
 }
