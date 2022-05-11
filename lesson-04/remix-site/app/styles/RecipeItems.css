@@ -1,0 +1,17 @@
+.page-header{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+   
+}
+
+.btn{
+    background-image: var(--gradient-12);
+    border: solid black var(--border-size-2);
+    border-radius: var(--radius-3);
+    padding: 12px;
+    font-size: var(--font-size-4);
+    text-decoration: none;
+    color: black;
+}
+

@@ -1,6 +1,7 @@
 import { Link, Outlet, LiveReload, Links, Meta, Scripts } from "remix";
 import globalStylesUrl from "~/styles/global.css";
 
+
 export const links = () => [
   {
     rel: "stylesheet",
@@ -50,7 +51,11 @@ function Layout({ children }) {
           Remix Blog
         </Link>
         <ul className="nav">
+<<<<<<< Updated upstream
           <Link to="/posts">Posts</Link>
+=======
+          <Link to="/recipes" className="rLink">Recipes</Link>
+>>>>>>> Stashed changes
         </ul>
       </nav>
       <div className="container">{children}</div>

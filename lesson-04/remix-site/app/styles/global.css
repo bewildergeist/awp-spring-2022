@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
 
 * {
@@ -201,3 +202,39 @@ p {
 .auth-container fieldset label {
   margin-right: 10px;
 }
+=======
+@import "https://unpkg.com/open-props";
+
+body{
+  margin: 0;
+  background-color: var(--gray-8);
+}
+
+.navbar{
+  display: flex;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: baseline;
+  inline-size: var(--size-header-);
+  background-color: var(--gray-8);
+ 
+}
+
+.logo{
+ 
+  font-size: var(--font-size-fluid-1);
+  font-weight: var(--font-weight-6);
+  font-family: var(--font-sans);
+  text-decoration: none;
+  color: var(--gray-1);
+}
+
+.rLink{
+ 
+  font-size: var(--font-size-fluid-1);
+  font-weight: var(--font-weight-3);
+  font-family: var(--font-sans);
+  text-decoration: none;
+  color: var(--gray-1);
+}
+>>>>>>> Stashed changes

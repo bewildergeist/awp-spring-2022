@@ -6,6 +6,11 @@ export const action = async ({ request }) => {
   const title = form.get("title");
   const body = form.get("body");
 
+<<<<<<< Updated upstream:lesson-04/remix-site/app/routes/posts/new.jsx
+=======
+  const ingredients = form.get("ingredients").split(', ');
+
+>>>>>>> Stashed changes:lesson-04/remix-site/app/routes/recipes/new.jsx
   const uuid = new Date().getTime().toString(16);
   db.data.posts.push({ id: uuid, title, body });
   db.write();
