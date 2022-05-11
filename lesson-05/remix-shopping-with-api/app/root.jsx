@@ -85,6 +85,7 @@ function Layout({ children }) {
           <MenuLink to="/mens-fashion">Men's fashion</MenuLink>
           <MenuLink to="/kids-fashion">Kid's fashion</MenuLink>
           <MenuLink to="/pet-supplies">Pet supplies</MenuLink>
+          <MenuLink to="/animals">Animals</MenuLink>
         </nav>
         <main className="flex-grow">{children}</main>
       </div>
