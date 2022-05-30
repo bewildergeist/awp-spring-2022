@@ -1,21 +1,21 @@
 import { Link, Outlet, LiveReload, Links, Meta, Scripts } from "remix";
-import globalStylesUrl from "~/styles/global.css";
+import styles from "~/styles/Home.css";
 
 export const links = () => [
   {
     rel: "stylesheet",
-    href: globalStylesUrl,
+    href: styles,
   },
 ];
 
 export const meta = () => ({
-  description: "An example blog",
-  keywords: "remix, javascript",
+  description: "A website blog to find delicious recipes.",
+  keywords: "food, recipe, blog, 🍪",
 });
 
 export default function App() {
   return (
-    <Document title="Remix Blog">
+    <Document title="Remixed Recipes">
       <Layout>
         <Outlet />
       </Layout>
@@ -47,11 +47,8 @@ function Layout({ children }) {
     <>
       <nav className="navbar">
         <Link to="/" className="logo">
-          Remix Blog
+          Remixed Recipes
         </Link>
-        <ul className="nav">
-          <Link to="/posts">Posts</Link>
-        </ul>
       </nav>
       <div className="container">{children}</div>
     </>
