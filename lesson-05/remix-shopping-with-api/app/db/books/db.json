@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Lord of the rings",
+      "description": "Very good book.",
+      "image": "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1566425108l/33.jpg"
+    },
+    {
+      "id": "Harry Poter",
+      "title": "Book 2",
+      "description": "A decent book.",
+      "image": "https://images.faraos.dk/ItemImages/9781408855898/medium/9781408855898.jpg"
+    },
+    {
+      "id": "3",
+      "title": "50 Shades of Gray",
+      "description": "Really bad book.",
+      "image": "https://cdn2.tales.dk/thumbnail/400x0/00027/31377/cover.1561329920.jpg"
+    },
+    {
+      "title": "Witcher",
+      "description": "Really nice book",
+      "image": "https://cdn1.tales.dk/thumbnail/400x0/products/00138/79591/the-last-wish-introducing-the-witcher-now-a-major-netflix-show.jpg",
+      "id": "17f4aa3cced"
+    },
+    {
+      "title": "I am watching you",
+      "description": "Scary book",
+      "image": "https://m.media-amazon.com/images/G/01/prime/primeinsider2/prnewesttitles/nov18/watching_you._CB480611966_.jpg",
+      "id": "17f4aa6f589"
+    },
+    {
+      "title": "The Hobbit",
+      "description": "Really interesting book",
+      "image": "https://images-cdn.reedsy.com/discovery/image/150/image/medium_760f92adf3322fe22c4b32b120516fc59102de58.jpg",
+      "id": "17f4aa77ddc"
+    }
+  ]
+}
